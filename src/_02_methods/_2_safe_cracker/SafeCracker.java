@@ -18,8 +18,8 @@ public class SafeCracker {
 	 * If you are not sure, ask your teacher 
 	 * *****************/
 	boolean canPlaySounds = true;
-	
-	
+
+
 	public static void main(String[] args) {
 		new SafeCracker().crackTheSafe();
 	}
@@ -29,11 +29,16 @@ public class SafeCracker {
 		 * Your mission: use the tryCode method to crack the safe by trying all possible
 		 * combinations
 		 */		
-
+		for(int i = 0; i <= 10000000; i ++) {
+			tryCode(i);
+		}
 	}
 
-	 void tryCode(int guess) {
-		System.out.println("trying " + guess);
+
+
+
+	void tryCode(int guess) {
+		//System.out.println("trying " + guess);
 
 		int secretCode = 9999999 - wekncrzpasfdkjhcfjse;
 
@@ -45,7 +50,7 @@ public class SafeCracker {
 	}
 
 	private void playTheSoundOfSuccess() {
-		
+
 		String path = "src/_02_methods/_2_safe_cracker/";
 		if (canPlaySounds) {	
 			File sound = new File(path+"me-gusta.wav");
