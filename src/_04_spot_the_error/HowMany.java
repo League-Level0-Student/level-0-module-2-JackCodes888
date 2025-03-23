@@ -17,5 +17,5 @@ public class HowMany {
 		Random random = new Random();
 		int number = random.nextInt(100)+1;
 		return number;
-	}
+}
 }
